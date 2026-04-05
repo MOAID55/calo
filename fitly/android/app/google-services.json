@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "859636319354",
+    "project_id": "fitly-e6658",
+    "storage_bucket": "fitly-e6658.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859636319354:android:e0f007bab2a1a800b927c3",
+        "android_client_info": {
+          "package_name": "com.example.fitly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQVIhOhcsd9pecii0CUZbhEGy04CsTZ8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
