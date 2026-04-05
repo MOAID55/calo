@@ -29,9 +29,7 @@ class ButtonPlanWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        title == "Balanced"
-            ? context.read<PlanBloc>().add(BalancedEvent())
-            : context.read<PlanBloc>().add(LowCarbsEvent());
+        context.read<PlanBloc>().add(PlanTypeEvent(planType: title));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

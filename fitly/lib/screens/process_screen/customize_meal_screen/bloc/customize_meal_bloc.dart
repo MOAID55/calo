@@ -7,9 +7,9 @@ part 'customize_meal_state.dart';
 class CustomizeMealBloc extends Bloc<CustomizeMealEvent, CustomizeMealState> {
   // Quantity meals
   int totalCalories = 0;
-  int breakfastQty = 0;
+  int breakfastQty = 1;
   int lunchQty = 1;
-  int dinnerQty = 0;
+  int dinnerQty = 1;
   int snacksQty = 1;
   int caloriesDinnerLunchBreakFast = 475;
   int caloryBreakfast = 175;

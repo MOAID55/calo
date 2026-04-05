@@ -10,16 +10,20 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   SplashBloc() : super(SplashInitial()) {
     on<SplashEvent>((event, emit) {});
     on<AppearLogoEvent>((event, emit) async {
-      final user = GetIt.I.get<AuthService>().currentUser;
+      final authservice = GetIt.I.get<AuthService>();
 
       await Future.delayed(Duration(seconds: 2));
+
       emit(AppearLogoState());
+      
       await Future.delayed(Duration(seconds: 1));
-      if (user != null) {
+
+      if (await authservice.isLogging()) {
         emit(AlreadySignInState());
       } else {
         emit(LoginPageState());
       }
+      
     });
   }
 }

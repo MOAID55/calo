@@ -34,7 +34,9 @@ class GoalScreen extends StatelessWidget {
       body: BlocListener<GoalBloc, GoalState>(
         listener: (context, state) {
           if (state is GoalPlanState) {
-            context.push(RouteKey.allergiesScreen,extra: state.goalPlan);
+            if(state.goalPlan == "Eat healthy") {
+              context.push(RouteKey.allergiesScreen,extra: state.goalPlan);
+            }
           }
 
         },
@@ -73,7 +75,7 @@ class GoalScreen extends StatelessWidget {
                       alpha: 0.4,
                     ),
                     center: Text("25%",style: Theme.of(context).textTheme.displaySmall),
-                    animateToInitialPercent: true,
+                    animateToInitialPercent: true, //start from 0 to exact percent
                     linearGradient: LinearGradient(
                       colors: [
                         ConstColor.progressIndicator,

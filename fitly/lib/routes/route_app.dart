@@ -11,8 +11,8 @@ import 'package:fitly/screens/auth_screen/register_screen/bloc/register_bloc.dar
 import 'package:fitly/screens/auth_screen/register_screen/register_screen.dart';
 import 'package:fitly/screens/auth_screen/splash_screen/bloc/splash_bloc.dart';
 import 'package:fitly/screens/auth_screen/splash_screen/splash_screen.dart';
-import 'package:fitly/screens/market_screen/cart%20summary/bloc/cart_bloc.dart';
-import 'package:fitly/screens/market_screen/cart%20summary/cart_summary.dart';
+import 'package:fitly/screens/market_screen/cart_summary/bloc/cart_bloc.dart';
+import 'package:fitly/screens/market_screen/cart_summary/cart_summary.dart';
 import 'package:fitly/screens/market_screen/market_screen/bloc/market_bloc.dart';
 import 'package:fitly/screens/market_screen/market_screen/market_screen.dart';
 import 'package:fitly/screens/market_screen/product_information/bloc/product_bloc.dart';

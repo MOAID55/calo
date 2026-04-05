@@ -7,11 +7,10 @@ part 'allergies_state.dart';
 class AllergiesBloc extends Bloc<AllergiesEvent, AllergiesState> {
   AllergiesBloc() : super(AllergiesInitial()) {
     on<AllergiesEvent>((event, emit) {});
-    on<ButtonYesEvent>((event, emit) {
-      emit(ButtonYesState(choice: "Yes"));
+
+    on<ButtonChoiceEvent>((event, emit) {
+      emit(ButtonChoiceState(choice: event.choice));
     });
-    on<ButtonNoEvent>((event, emit) {
-      emit(ButtonNoState(choice: "No"));
-    });
+    
   }
 }

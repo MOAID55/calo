@@ -7,11 +7,9 @@ part 'plan_state.dart';
 class PlanBloc extends Bloc<PlanEvent, PlanState> {
   PlanBloc() : super(PlanInitial()) {
     on<PlanEvent>((event, emit) {});
-    on<BalancedEvent>((event, emit) {
-      emit(BalancedState(balanced: "balanced"));
+    on<PlanTypeEvent>((event, emit) {
+      emit(PlanTypeState(planType: event.planType));
     });
-    on<LowCarbsEvent>((event, emit) {
-      emit(LowCarbsState(lowCarbs: "lowCarbs"));
-    });
+   
   }
 }

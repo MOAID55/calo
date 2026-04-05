@@ -1,5 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:fitly/core/services/auth_setup.dart';
+import 'package:fitly/core/services/setup.dart';
 import 'package:fitly/core/theme/theme_app.dart';
 import 'package:fitly/routes/route_app.dart';
 import 'package:flutter/material.dart';

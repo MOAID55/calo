@@ -33,8 +33,13 @@ class PlanScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: BlocListener<PlanBloc, PlanState>(
           listener: (context, state) {
-            if (state is BalancedState) {
-              context.push(RouteKey.customizeMealScreen, extra: state.balanced);
+            if (state is PlanTypeState) {
+              if (state.planType == "Balanced") {
+                context.push(
+                  RouteKey.customizeMealScreen,
+                  extra: state.planType,
+                );
+              }
             }
           },
           child: SingleChildScrollView(

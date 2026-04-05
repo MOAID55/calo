@@ -31,7 +31,7 @@ class RowCustomizeWidget extends StatelessWidget {
           minVal: 0,
           steps: 1,
           onQtyChanged: (val) {
-            if (type == "balanced") {
+            if (type == "Balanced") {
               context.read<CustomizeMealBloc>().add(
                 ChangeMealQty(meal: title, quantity: val),
               );

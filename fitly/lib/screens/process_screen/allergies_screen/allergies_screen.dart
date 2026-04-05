@@ -32,8 +32,10 @@ class AllergiesScreen extends StatelessWidget {
       ),
       body: BlocListener<AllergiesBloc, AllergiesState>(
         listener: (context, state) {
-          if (state is ButtonNoState) {
-            context.push(RouteKey.planScreen, extra: state.choice);
+          if (state is ButtonChoiceState) {
+            if(state.choice == "No") {
+              context.push(RouteKey.planScreen, extra: state.choice);
+            }
           }
         },
         child: Padding(

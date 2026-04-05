@@ -173,6 +173,7 @@ class MarketScreen extends StatelessWidget {
                                         crossAxisSpacing: 9,
                                         mainAxisSpacing: 9,
                                         childAspectRatio: 0.75,
+                                       
                                       ),
                                   itemBuilder: (context, productIndex) {
                                     final product = state

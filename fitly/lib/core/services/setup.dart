@@ -9,5 +9,4 @@ void setup() {
   getIt.registerLazySingleton<CartMarketRepository>(
     () => CartMarketRepository(),
   );
- 
 }

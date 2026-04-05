@@ -3,6 +3,7 @@ part of 'allergies_bloc.dart';
 @immutable
 sealed class AllergiesEvent {}
 
-final class ButtonYesEvent extends AllergiesEvent {}
-
-final class ButtonNoEvent extends AllergiesEvent {}
+final class ButtonChoiceEvent extends AllergiesEvent {
+  final String choice;
+  ButtonChoiceEvent({required this.choice});
+}

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:fitly/core/services/auth_service.dart';
-import 'package:fitly/core/services/auth_setup.dart';
+import 'package:fitly/core/services/setup.dart';
 import 'package:meta/meta.dart';
 
 part 'account_event.dart';
@@ -17,7 +17,7 @@ class AccountBloc extends Bloc<AccountEvent, AccountState> {
     });
 
     on<SignOutEvent>((event, emit) {
-      auth.singOut();
+      auth.signOut();
       emit(SignOutState());
     });
   }

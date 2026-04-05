@@ -63,7 +63,8 @@ class AccountScreen extends StatelessWidget {
                     onTap: () async {
                       final result = await context.push(RouteKey.profileScreen);
                       if (result == true) {
-                        context.read<AccountBloc>().add(LoadedDataEvent()); 
+                        
+                        context.read<AccountBloc>().add(LoadedDataEvent());
                       }
                     },
                     leading: CircleAvatar(minRadius: 30, maxRadius: 30),

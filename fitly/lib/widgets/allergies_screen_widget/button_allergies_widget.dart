@@ -18,21 +18,22 @@ class ButtonAllergiesWidget extends StatelessWidget {
       style: OutlinedButton.styleFrom(
         fixedSize: Size.fromHeight(MediaQuery.of(context).size.height / 10),
         backgroundColor: ConstColor.cardChoice,
-        
+
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
       onPressed: () {
-        title == "Yes"
-            ? context.read<AllergiesBloc>().add(ButtonYesEvent())
-            : context.read<AllergiesBloc>().add(ButtonNoEvent());
+        context.read<AllergiesBloc>().add(ButtonChoiceEvent(choice: title));
       },
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
           mainAxisAlignment: .spaceBetween,
-          children: [Text(title,style: Theme.of(context).textTheme.titleLarge,), icon],
+          children: [
+            Text(title, style: Theme.of(context).textTheme.titleLarge),
+            icon,
+          ],
         ),
       ),
     );
