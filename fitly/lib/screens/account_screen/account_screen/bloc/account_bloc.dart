@@ -12,8 +12,8 @@ class AccountBloc extends Bloc<AccountEvent, AccountState> {
     on<AccountEvent>((event, emit) {});
 
     on<LoadedDataEvent>((event, emit) {
-      String? name = auth.currentUser!.displayName;
-      emit(LoadDataState(name: name!));
+      String name = auth.getUserData().displayName!;
+      emit(LoadDataState(name: name));
     });
 
     on<SignOutEvent>((event, emit) {

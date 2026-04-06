@@ -12,8 +12,9 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileEvent>((event, emit) {});
 
     on<LoadDataProfileEvent>((event, emit) {
-      String? nameUser = auth.currentUser!.displayName!;
-      String emailUser = auth.currentUser!.email!;
+      final user = auth.getUserData();
+      String nameUser = user.displayName!;
+      String emailUser = user.email!;
       emit(LoadDataProfileState(name: nameUser, email: emailUser));
     });
 
@@ -22,7 +23,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         emit(NameEmpty());
         return;
       }
-      
+
       final checkSuccessfulChange = await auth.updateNameUser(event.name);
 
       checkSuccessfulChange.fold(

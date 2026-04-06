@@ -5,6 +5,12 @@ class AuthService {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   User? get currentUser => firebaseAuth.currentUser;
 
+  User getUserData() {
+    return currentUser!;
+  }
+
+  // ------------- last sign in ---------
+
   Future<bool> isLogging() async {
     if (currentUser != null) {
       return true;

@@ -61,10 +61,10 @@ class AccountScreen extends StatelessWidget {
                 child: Center(
                   child: ListTile(
                     onTap: () async {
+                      final bloc = context.read<AccountBloc>();  // here i save to bloc avoid maybe dispose this page
                       final result = await context.push(RouteKey.profileScreen);
                       if (result == true) {
-                        
-                        context.read<AccountBloc>().add(LoadedDataEvent());
+                        bloc.add(LoadedDataEvent());
                       }
                     },
                     leading: CircleAvatar(minRadius: 30, maxRadius: 30),
